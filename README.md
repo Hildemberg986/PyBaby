@@ -1,2 +1,2 @@
 # PyBaby
-Um programa de vendas para loja de bebê
+Um Sistema de Gestão para uma Loja de Bebês.
