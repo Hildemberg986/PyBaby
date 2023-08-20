@@ -5,7 +5,7 @@
 //#               Departamento de Computação e Tecnologia                   #//
 //#                  Disciplina DCT1106 -- Programação                      #//
 //#    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    #//
-//#    Developed by https://github.com/Hildemberg986 -- since Mar, 2020     #//
+//#    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     #//
 //#                                                                         #//
 //###########################################################################//
 //#                                Semana 1                                 #//
@@ -45,7 +45,7 @@ void main_menu_screen(void) {
     printf("###               Departamento de Computação e Tecnologia                   ###\n");
     printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
     printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
-    printf("###    Developed by https://github.com/Hildemberg986 -- since Mar, 2020     ###\n");
+    printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
@@ -76,7 +76,7 @@ void about_screen(void) {
     printf("###               Departamento de Computação e Tecnologia                   ###\n");
     printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
     printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
-    printf("###    Developed by https://github.com/Hildemberg986 -- since Mar, 2020     ###\n");
+    printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
