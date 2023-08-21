@@ -49,7 +49,7 @@ void main_menu_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
-    printf("###                         |=====- PyBaby -=====|                          ###\n");
+    printf("###                       |=====- PyBaby Menu-=====|                        ###\n");
     printf("###                                                                         ###\n");
     printf("###                          1-> Login                                      ###\n");
     printf("###                          2-> Sobre                                      ###\n");
@@ -57,11 +57,8 @@ void main_menu_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
-    printf("###            Escolha a opção desejada: ");
+    printf("###  Digite a opção desejada e Tecle <ENTER> para continuar... ");
     scanf("%c", &option);
-    getchar();
-    printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
@@ -80,13 +77,12 @@ void about_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
-    printf("###                         |=====- PyBaby -=====|                          ###\n");
+    printf("###                      |=====- PyBaby Sobre -=====|                       ###\n");
     printf("###                                                                         ###\n");
-    printf("###                                                                         ###\n");
-    printf("###                                                                         ###\n");
-    printf("###                                                                         ###\n");
-    printf("###                                                                         ###\n");
-    printf("###                                                                         ###\n");
+    printf("###  Um Sistema comercial para a gestão de uma loja de bebês. Desenvolvido  ###\n");
+    printf("###  na materia DCT1106 - PROGRAMAÇÃO com o intuito  avaliativo  sobre  os  ###\n");
+    printf("###  alunos para testar a compreenção e conhecimentos  em  programação  do  ###\n");
+    printf("###  desenvolvedor, tendo uma natureza estritamente acadêmica.              ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
@@ -109,7 +105,7 @@ void team_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
-    printf("###                         |=====- PyBaby -=====|                          ###\n");
+    printf("###                      |=====- PyBaby Equipe-=====|                       ###\n");
     printf("###                                                                         ###\n");
     printf("###            Este projeto exemplo foi desenvolvido por:                   ###\n");
     printf("###                                                                         ###\n");
