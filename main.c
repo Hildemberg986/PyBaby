@@ -19,13 +19,17 @@
 void main_menu_screen(void);
 void about_screen(void);
 void team_screen(void);
+void login_screen(void);
 
 /////
 // Programa principal
 int main(void) {
+
     main_menu_screen();
     about_screen();
     team_screen();
+    login_screen();
+
     return 0;
 }
 
@@ -59,7 +63,6 @@ void main_menu_screen(void) {
     printf("\n");
     printf("###  Digite a opção desejada e Tecle <ENTER> para continuar... ");
     scanf("%c", &option);
-    getchar();
 }
 
 
@@ -105,7 +108,7 @@ void team_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
-    printf("###                      |=====- PyBaby Equipe-=====|                       ###\n");
+    printf("###                     |=====- PyBaby Equipe -=====|                       ###\n");
     printf("###                                                                         ###\n");
     printf("###            Este projeto exemplo foi desenvolvido por:                   ###\n");
     printf("###                                                                         ###\n");
@@ -118,4 +121,32 @@ void team_screen(void) {
     printf("\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
+} 
+
+
+void login_screen(void) {
+    char option;
+    system("clear||cls");
+    printf("\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
+    printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
+    printf("###                                                                         ###\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###                      |=====- PyBaby Login -=====|                       ###\n");
+    printf("###                                                                         ###\n");
+    printf("###                       1-> Logar como Usuario                            ###\n");
+    printf("###                       2-> Logar como Administrador                      ###\n");
+    printf("###                       3-> Cadastrar Novo Usuario                        ###\n");
+    printf("###                                                                         ###\n");
+    printf("###############################################################################\n");
+    printf("\n");
+    printf("###  Digite a opção desejada e Tecle <ENTER> para continuar... ");
+    scanf("%c", &option);
 } 
