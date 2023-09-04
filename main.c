@@ -21,11 +21,12 @@ void about_screen(void);
 void team_screen(void);
 void login_screen(void);
 void registration_screen(void);
-
+void login_client(void);
 /////
 // Programa principal
 int main(void) {
 
+    login_client();
     main_menu_screen();
     about_screen();
     team_screen();
@@ -143,9 +144,9 @@ void login_screen(void) {
     printf("###                                                                         ###\n");
     printf("###                      |=====- PyBaby Login -=====|                       ###\n");
     printf("###                                                                         ###\n");
-    printf("###                       1-> Logar como Usuario                            ###\n");
+    printf("###                       1-> Logar como Cliente                            ###\n");
     printf("###                       2-> Logar como Administrador                      ###\n");
-    printf("###                       3-> Cadastrar Novo Usuario                        ###\n");
+    printf("###                       3-> Cadastrar Novo Cliente                        ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
@@ -177,14 +178,43 @@ void registration_screen(void) {
     printf("###                                                                         ###\n");
     printf("###                     |=====- PyBaby Cadastro -=====|                     ###\n");
     printf("###                                                                         ###\n");
-    printf("###   --> Digite o Nome do Usuario... ");
+    printf("###   --> Digite o Nome do Cliente... ");
     scanf("%99[^\n]",pessoa1.name);
     getchar();
-    printf("###   --> Digite o CPF do Usuario... ");
+    printf("###   --> Digite o CPF do Cliente... ");
     scanf("%12[^\n]",pessoa1.cpf);
     getchar();
-    printf("###   --> Digite o email do Usuario... ");
+    printf("###   --> Digite o email do Cliente... ");
     scanf("%100[^\n]",pessoa1.email);
+    getchar();
+    printf("\n");
+} 
+
+void login_client(void) {
+
+    char pasword[100];
+    char cpf[12];
+
+    system("clear||cls");
+    printf("\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
+    printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
+    printf("###                                                                         ###\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###                  |=====- PyBaby Login Client -=====|                    ###\n");
+    printf("###                                                                         ###\n");
+    printf("###   --> Digite o CPF do Cliente... ");
+    scanf("%12[^\n]",cpf);
+    getchar();
+    printf("###   --> Digite a senha... ");
+    scanf("%99[^\n]",pasword);
     getchar();
     printf("\n");
 } 
