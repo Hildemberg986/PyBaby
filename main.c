@@ -13,25 +13,67 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
 
 /////
 // Assinatura das funções
-void main_menu_screen(void);
+char main_menu_screen(void);
 void about_screen(void);
 void team_screen(void);
-void login_screen(void);
+char login_screen(void);
 void registration_screen(void);
 void login_client(void);
+void login_admin(void);
+void fall_asleep(int seconds);
 /////
 // Programa principal
 int main(void) {
+    char option;
 
-    login_client();
-    main_menu_screen();
-    about_screen();
-    team_screen();
-    login_screen();
-    registration_screen();
+    do {
+        option = main_menu_screen();
+        switch (option) {
+                case '1':
+                    do {
+                        option = login_screen();
+                        switch (option) {
+                            case '1':
+                                login_client();
+                                break;
+                            case '2':
+                                login_admin();
+                                break;
+                            case '3':
+                                registration_screen();
+                                break;
+                            case '0':
+                                break;
+                            default:
+                                printf("\t\t\tOpção inválida. Tente novamente.\n");
+                                fall_asleep(2);
+                        }
+                    } while (option != '0');
+                option = '\0';
+                break;
+            case '2':
+                about_screen();
+                break;
+            case '3':
+                team_screen();
+                break;
+            case '0':
+                system("clear||cls");
+                printf("\t\t\tPrograma Encerrado\n");
+                break;
+            default:
+                printf("\t\t\tOpção inválida. Tente novamente.\n");
+                fall_asleep(2);
+        }
+    } while (option != '0');
 
     return 0;
 }
@@ -40,7 +82,7 @@ int main(void) {
 /////
 // Funções
 
-void main_menu_screen(void) {
+char main_menu_screen(void) {
     char option;
     system("clear||cls");
     printf("\n");
@@ -61,11 +103,14 @@ void main_menu_screen(void) {
     printf("###                          1-> Login                                      ###\n");
     printf("###                          2-> Sobre                                      ###\n");
     printf("###                          3-> Equipe                                     ###\n");
+    printf("###                          0-> Sair                                       ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
     printf("###  Digite a opção desejada e Tecle <ENTER> para continuar... ");
     scanf("%c", &option);
+    getchar();
+    return option;
 }
 
 
@@ -92,7 +137,7 @@ void about_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...");
     getchar();
 }
 
@@ -122,12 +167,12 @@ void team_screen(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...");
     getchar();
 } 
 
 
-void login_screen(void) {
+char login_screen(void) {
     char option;
     system("clear||cls");
     printf("\n");
@@ -147,11 +192,14 @@ void login_screen(void) {
     printf("###                       1-> Logar como Cliente                            ###\n");
     printf("###                       2-> Logar como Administrador                      ###\n");
     printf("###                       3-> Cadastrar Novo Cliente                        ###\n");
+    printf("###                       0-> Voltar                                        ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("\n");
     printf("###  Digite a opção desejada e Tecle <ENTER> para continuar... ");
-    scanf("%c", &option);
+    scanf(" %c", &option);
+    getchar();
+    return option;
 } 
 
 void registration_screen(void) {
@@ -211,6 +259,41 @@ void login_client(void) {
     printf("###                  |=====- PyBaby Login Client -=====|                    ###\n");
     printf("###                                                                         ###\n");
     printf("###   --> Digite o CPF do Cliente... ");
+    scanf("%12[^\n]",cpf);
+    getchar();
+    printf("###   --> Digite a senha... ");
+    scanf("%99[^\n]",pasword);
+    getchar();
+    printf("\n");
+} 
+void fall_asleep(int seconds) {
+#ifdef _WIN32
+    Sleep(segundos * 1000);
+#else
+    sleep(seconds);
+#endif
+}
+void login_admin(void) {
+
+    char pasword[100];
+    char cpf[12];
+
+    system("clear||cls");
+    printf("\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
+    printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
+    printf("###                                                                         ###\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###                   |=====- PyBaby Login Admin -=====|                    ###\n");
+    printf("###                                                                         ###\n");
+    printf("###   --> Digite o CPF do Administrador... ");
     scanf("%12[^\n]",cpf);
     getchar();
     printf("###   --> Digite a senha... ");
