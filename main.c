@@ -40,7 +40,7 @@ int main(void)
     do
     {
         option = '\0';
-        option = main_menu_screen(); 
+        option = main_menu_screen();
         if (validate_option(option))
         {
             switch (option)
@@ -333,8 +333,10 @@ bool validate_option(char character)
     }
     return false;
 }
-void clearBuffer() {
+void clearBuffer()
+{
     int c;
-    while ((c = getchar()) != '\n' && c != EOF) {
+    while ((c = getchar()) != '\n' && c != EOF)
+    {
     }
 }
