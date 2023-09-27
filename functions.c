@@ -8,6 +8,7 @@
 #include <unistd.h>
 #endif
 
+//Retirado do chatGPT
 void clearBuffer(void) {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
