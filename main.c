@@ -8,13 +8,15 @@
 // #    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     #//
 // #                                                                         #//
 // ###########################################################################//
-// #                                Semana 1                                 #//
+// #                                Semana 6                                 #//
 // ###########################################################################//
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"
 #include "screens.h"
+#include "logic_main_menu.h"
+#include "logic_login_menu.h"
 /////
 // Programa principal
 int main(void)
@@ -22,53 +24,10 @@ int main(void)
     char option;
     do
     {
-        option = '\0';
         option = main_menu_screen();
         if (validate_option(option))
         {
-            switch (option)
-            {
-            case '1':
-                do
-                {
-                    option = login_screen();
-                    switch (option)
-                    {
-                    case '1':
-                        login_client();
-                        break;
-                    case '2':
-                        login_admin();
-                        break;
-                    case '3':
-                        registration_screen();
-                        break;
-                    case '0':
-                        break;
-                    default:
-                        system("clear||cls");
-                        printf("\t\t\tOpção inválida. Tente novamente.\n");
-                        clearBuffer();
-                        fall_asleep(2);
-                    }
-                } while (option != '0');
-                option = '\0';
-                break;
-            case '2':
-                about_screen();
-                break;
-            case '3':
-                team_screen();
-                break;
-            case '0':
-                system("clear||cls");
-                printf("\t\t\tPrograma Encerrado\n");
-                break;
-            default:
-                printf("\t\t\tOpção inválida. Tente novamente.\n");
-                clearBuffer();
-                fall_asleep(2);
-            }
+            logic_main_menu(option);
         }
         else
         {
