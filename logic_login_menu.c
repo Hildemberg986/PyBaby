@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "functions.h"
 #include "screens.h"
 #include "logic_login_menu.h"
 
 void logic_login_menu()
 {
+    bool valitation;
     char option;
     do
     {
@@ -13,8 +15,22 @@ void logic_login_menu()
         switch (option)
         {
         case '1':
-            login_client();
-            break;
+            valitation = login_client();
+            if (valitation)
+            {
+                system("clear||cls");
+                printf("validooooooooooooooooooo\n");
+                fall_asleep(2);
+                option = '0';
+                break;
+            }
+            else
+            {
+                system("clear||cls");
+                printf("login invalido!!!\n");
+                fall_asleep(2);
+                break;
+            }
         case '2':
             login_admin();
             break;

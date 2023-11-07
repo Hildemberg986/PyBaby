@@ -1,5 +1,7 @@
 #include "screens.h"
+#include "functions.h"
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdlib.h>
 char main_menu_screen(void)
 {
@@ -160,11 +162,12 @@ void registration_screen(void)
     printf("\n");
 }
 
-void login_client(void)
+bool login_client(void)
 {
 
-    char pasword[100];
+    char password[100];
     char cpf[12];
+    bool valitation;
 
     system("clear||cls");
     printf("\n");
@@ -185,9 +188,17 @@ void login_client(void)
     scanf("%12[^\n]", cpf);
     getchar();
     printf("###   --> Digite a senha... ");
-    scanf("%99[^\n]", pasword);
+    scanf("%99[^\n]", password);
     getchar();
     printf("\n");
+    valitation = validar_login(password,cpf);
+    if(valitation){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
 }
 
 void login_admin(void)

@@ -8,10 +8,12 @@
 #include <unistd.h>
 #endif
 
-//Retirado do chatGPT
-void clearBuffer(void) {
+// Retirado do chatGPT
+void clearBuffer(void)
+{
     int c;
-    while ((c = getchar()) != '\n' && c != EOF);
+    while ((c = getchar()) != '\n' && c != EOF)
+        ;
 }
 
 bool validate_option(char character)
@@ -29,4 +31,10 @@ void fall_asleep(int seconds)
 #else
     sleep(seconds);
 #endif
+}
+
+bool validar_login(char *password, char *cpf)
+{
+    printf("Password: %s, CPF: %s\n", password, cpf);
+    return true;
 }
