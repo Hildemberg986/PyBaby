@@ -19,7 +19,7 @@ void logic_login_menu()
             if (valitation)
             {
                 system("clear||cls");
-                printf("validooooooooooooooooooo\n");
+                printf("validoooo\n");
                 fall_asleep(2);
                 option = '0';
                 break;

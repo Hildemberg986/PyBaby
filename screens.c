@@ -131,6 +131,7 @@ void registration_screen(void)
         char name[99];
         char cpf[12];
         char email[100];
+        char password[100];
     };
 
     struct pessoa pessoa1;
@@ -159,6 +160,10 @@ void registration_screen(void)
     printf("###   --> Digite o email do Cliente... ");
     scanf("%100[^\n]", pessoa1.email);
     getchar();
+     printf("###   --> Digite uma senha de login... ");
+    scanf("%12[^\n]", pessoa1.password);
+    getchar();
+    cadastrarUsuario(pessoa1.cpf, pessoa1.password);
     printf("\n");
 }
 
@@ -191,14 +196,8 @@ bool login_client(void)
     scanf("%99[^\n]", password);
     getchar();
     printf("\n");
-    valitation = validar_login(password,cpf);
-    if(valitation){
-        return true;
-    }
-    else{
-        return false;
-    }
-    
+    valitation = validar_login(cpf, password);
+    return valitation;
 }
 
 void login_admin(void)

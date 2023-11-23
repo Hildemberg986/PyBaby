@@ -52,5 +52,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-#pastas
+#Pastas
 /output
+
+#Dados
+*.db
