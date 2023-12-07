@@ -19,8 +19,7 @@ void logic_login_menu()
             if (valitation)
             {
                 system("clear||cls");
-                printf("validoooo\n");
-                fall_asleep(2);
+                client_sale();
                 option = '0';
                 break;
             }
@@ -32,9 +31,6 @@ void logic_login_menu()
                 break;
             }
         case '2':
-            login_admin();
-            break;
-        case '3':
             registration_screen();
             break;
         case '0':

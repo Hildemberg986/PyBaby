@@ -112,8 +112,7 @@ char login_screen(void)
     printf("###                      |=====- PyBaby Login -=====|                       ###\n");
     printf("###                                                                         ###\n");
     printf("###                       1-> Logar como Cliente                            ###\n");
-    printf("###                       2-> Logar como Administrador                      ###\n");
-    printf("###                       3-> Cadastrar Novo Cliente                        ###\n");
+    printf("###                       2-> Cadastrar Novo Cliente                        ###\n");
     printf("###                       0-> Voltar                                        ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
@@ -230,3 +229,23 @@ void login_admin(void)
     printf("\n");
 }
 
+void client_sale(void)
+{
+
+    system("clear||cls");
+    printf("\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
+    printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
+    printf("###                                                                         ###\n");
+    printf("###############################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###                   |=====- PyBaby client sale -=====|                    ###\n");
+    printf("###                                                                         ###\n");
+    getchar();
+}

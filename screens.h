@@ -10,4 +10,5 @@ char login_screen(void);
 void registration_screen(void);
 bool login_client(void);
 void login_admin(void);
+void client_sale(void);
 #endif
