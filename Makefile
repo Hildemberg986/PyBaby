@@ -8,7 +8,11 @@ CC = gcc
 CFLAGS = -Wall -Wextra
 
 # Arquivos fonte
-SRCS = $(shell cat imports.txt)
+ifeq ($(OS),Windows_NT)
+    SRCS := $(shell type imports.txt)
+else
+    SRCS := $(shell cat imports.txt)
+endif
 
 # Objetos gerados
 OBJS = $(SRCS:.c=.o)
@@ -25,5 +29,7 @@ $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Regra para limpar arquivos objeto e o executável
-clean:
+cleanunix:
 	rm -f $(OBJS)
+cleanwindows:
+	del /Q $(OBJS)
