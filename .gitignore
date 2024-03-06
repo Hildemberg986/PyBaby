@@ -55,6 +55,7 @@ dkms.conf
 
 #Pastas
 /output
+/node_modules
 
 #Dados
 *.db

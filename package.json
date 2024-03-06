@@ -3,20 +3,10 @@
   "version": "1.0.0",
   "description": "Descrição do seu projeto",
   "scripts": {
-    "build:windows": "mingw32-make",
-    "clean:windows": "mingw32-make cleanwindows",
-    "build:unix": "make",
-    "clean:unix": "make cleanunix",
-    "clean:os": "npm run clean:windows || npm run clean:unix",
-    "build:os": "npm run build:windows || npm run build:unix",
-    "build":"npm run build:os",
-    "clean":"npm run clean:os",
-    "clear": "npm run clear:os",
-    "clear:os": "npm run clear:windows || npm run clear:unix",
-    "clear:windows": "cls",
-    "clear:unix": "clear",
-    "open":"./main || main",
-    "dev": "npm run build && npm run clean && npm run clear && npm run open"
+    "open:windows":"main",
+    "open:unix":"./main",
+    "open:os":"npm run open:windows || npm run open:unix",
+    "dev": "ts-node build.ts && npm run open:os"
   },
   "author": "Seu Nome",
   "license": "GNU",
@@ -26,6 +16,9 @@
   "extensionPack": [
     "ms-vscode.makefile-tools",
     "ms-vscode.cpptools"
-  ]
+  ],
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
 }
-

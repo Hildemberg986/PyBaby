@@ -15,12 +15,12 @@ char main_menu_screen(void)
     printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
     printf("###               Departamento de Computação e Tecnologia                   ###\n");
     printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
-    printf("###    Projeto Um Sistema de Gestão para uma Loja de produtos para Bebês    ###\n");
+    printf("###              Projeto Um Sistema de Gestão para um Hotel                 ###\n");
     printf("###    Developed by https://github.com/Hildemberg986 -- since Aug, 2023     ###\n");
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
-    printf("###                       |=====- PyBaby Menu-=====|                        ###\n");
+    printf("###                          |=====- Menu -=====|                           ###\n");
     printf("###                                                                         ###\n");
     printf("###                          1-> Login                                      ###\n");
     printf("###                          2-> Sobre                                      ###\n");
